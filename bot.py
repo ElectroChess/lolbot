@@ -4,7 +4,7 @@ from discord.ext import commands
 
 prefixes = ['<@!757743672379834448> ', 'lol ', 'lol']
 bot = commands.Bot(command_prefix=prefixes)
-token = open('C:/Users/Mythify/Desktop/education/coding/python/bots/lolbot/token.txt').read()
+token = 'NzU3NzQzNjcyMzc5ODM0NDQ4.X2k1yQ.6hpugm8PfTkxxjCpCpuBuQFSXnM'
 bot.remove_command('help')
 def is_it_me(ctx):
     return ctx.author.id == 475315771086602241
@@ -27,7 +27,7 @@ async def cog(ctx, typeOf, extension):
         bot.load_extension(f'cogs.{extension}')
         await ctx.send(f'Reloaded **{extension}**!') 
 
-for filename in os.listdir('C:/Users/Mythify/Desktop/education/coding/python/bots/lolbot/cogs'):
+for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         bot.load_extension(f'cogs.{filename[:-3]}')
 
