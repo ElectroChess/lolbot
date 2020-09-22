@@ -11,7 +11,7 @@ class meme(commands.Cog):
     @commands.command(pass_context=True)
     async def meme(self, ctx):
         r = requests.get('https://www.reddit.com/r/memes/hot.json?sort=new')
-        res = await r.json()
+        res = r.json()
         ran = random.randint(0, 25)
         imgurl = res['data']['children'][ran]['data']['url']
         upvotes = res['data']['children'][ran]['data']['ups']
