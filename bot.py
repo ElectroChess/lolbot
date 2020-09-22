@@ -4,8 +4,8 @@ from discord.ext import commands
 
 prefixes = ['<@!757743672379834448> ', 'lol ', 'lol']
 bot = commands.Bot(command_prefix=prefixes)
-token = 'NzU3NzQzNjcyMzc5ODM0NDQ4.X2k1yQ.6hpugm8PfTkxxjCpCpuBuQFSXnM'
 bot.remove_command('help')
+
 def is_it_me(ctx):
     return ctx.author.id == 475315771086602241
 
@@ -31,4 +31,4 @@ for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         bot.load_extension(f'cogs.{filename[:-3]}')
 
-bot.run(token)
+bot.run('NzU3NzQzNjcyMzc5ODM0NDQ4.X2k1yQ.6hpugm8PfTkxxjCpCpuBuQFSXnM')
