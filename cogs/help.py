@@ -13,7 +13,7 @@ class helpcmd(commands.Cog):
         embed.set_author(name=ctx.guild.name, icon_url=ctx.guild.icon_url)
         embed.add_field(name='Meme Commands', value='`lol meme`, `lol cleanmeme`, `lol dankmeme`, `lol discordmeme`', inline=False)
         embed.add_field(name='Joke Commands', value='`lol joke`, `lol cleanjoke`')
-        embed.set_footer(text=f'Requested bu {ctx.author.name}', icon_url=ctx.author.avatar_url)
+        embed.set_footer(text=f'Requested by {ctx.author.name}', icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
 
 def setup(bot):
