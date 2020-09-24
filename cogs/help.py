@@ -14,6 +14,7 @@ class helpcmd(commands.Cog):
         embed.add_field(name='Meme Commands', value='`lol meme`, `lol cleanmeme`, `lol dankmeme`, `lol discordmeme`', inline=False)
         embed.add_field(name='Joke Commands', value='`lol joke`, `lol cleanjoke`', inline=False)
         embed.add_field(name='Image Commands', value='`lol avatar`', inline=False)
+        embed.add_field(name='Fun Commands', value='`lol kill`', inline=False)
         embed.add_field(name='Other Commands', value='`lol ping`', inline=False)
         embed.set_footer(text=f'Requested by {ctx.author.name}', icon_url=ctx.author.avatar_url)
         await ctx.send(embed=embed)
