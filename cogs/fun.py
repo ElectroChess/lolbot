@@ -10,10 +10,10 @@ class fun(commands.Cog):
 
     @commands.command()
     async def kill(self, ctx, *, member: discord.Member):
-        phrases = [f'{member.name} died because his fartnite account with $1 of winnings was compromised',
-                   f'{member.name} died because he crapped too hard after eating too many taco bell tacos', 
+        phrases = [f'{member.name} died because their fartnite account with $1 of winnings was compromised',
+                   f'{member.name} died because they crapped too hard after eating too many taco bell tacos', 
                    f'{member.name} tripped and fell on {ctx.author.name}\'s foot',
-                   f'{member.name} forgot his discord password.',
+                   f'{member.name} forgot their discord password.',
                    f'{member.name} was sat on by obese {ctx.author.name}',
                    f'{ctx.author.name} dropped a VGA TV on {member.name}']
         randomPhrase = random.choice(phrases)
