@@ -13,7 +13,12 @@ class other(commands.Cog):
     
     @commands.command()
     async def invite(self, ctx):
-        embed=discord.Embed(description='[invite me pls](https://tinyurl.com/lolbot-discordbot)', color=random.randint(0, 0xffffff))
+        embed=discord.Embed(description='[**invite me pls**](https://tinyurl.com/lolbot-discordbot)', color=random.randint(0, 0xffffff))
+        await ctx.send(embed=embed)
+
+    @commands.command()
+    async def discord(self, ctx):
+        embed=discord.Embed(description='[**join my dev server pls**](https://tinyurl.com/lolbot-server)', color=random.randint(0, 0xffffff))
         await ctx.send(embed=embed)
 
 def setup(bot):
