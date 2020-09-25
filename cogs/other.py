@@ -10,6 +10,11 @@ class other(commands.Cog):
     @commands.command()
     async def ping(self, ctx):
         await ctx.send(f'i responded in `{round(self.bot.latency * 1000)}`` milliseconds')
+    
+    @commands.command()
+    async def invite(self, ctx):
+        embed=discord.Embed(description='[invite me pls](https://tinyurl.com/lolbot-discordbot)', color=random.randint(0, 0xffffff))
+        await ctx.send(embed=embed)
 
 def setup(bot):
     bot.add_cog(other(bot))
