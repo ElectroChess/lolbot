@@ -23,8 +23,10 @@ class image(commands.Cog):
 
     @commands.command()
     async def yotub(self, ctx):
+        with open('./YoTub.png', 'rb') as f:
+            YoTubImg = discord.File(f)
         embed = discord.Embed(color=0xff0000, title='YoTub')
-        embed.set_image(url=discord.File('images/YoTub.png'))
+        embed.set_image(url=YoTubImg)
         await ctx.send(embed=embed)
 
 
