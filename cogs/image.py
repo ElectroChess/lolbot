@@ -5,7 +5,6 @@ from discord.ext import commands
 from discord import File
 from PIL import Image, ImageDraw, ImageFont
 import io
-import urllib.request
 
 
 class image(commands.Cog):
@@ -36,10 +35,8 @@ class image(commands.Cog):
     async def canvas(self, ctx, text=None):
         # read background image only once
 
-        response = urllib.request.urlopen(
-            'https://cdn.discordapp.com/attachments/760275448553930792/761625339252179004/GRAdient.png')
         # it doesn't need `io.Bytes` because it `response` has method `read()`
-        background_image = Image.open(response)
+        background_image = Image.open('images/GRAdient.png')
         # add channel ALPHA to draw transparent rectangle
         background_image = background_image.convert('RGBA')
         AVATAR_SIZE = 128
