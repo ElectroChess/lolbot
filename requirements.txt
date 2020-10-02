@@ -1,3 +1,6 @@
 discord
 aiohttp
 asyncio
+PIL
+io
+urllib.request
