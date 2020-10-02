@@ -83,7 +83,7 @@ class image(commands.Cog):
 
         text = f'Hello {ctx.author.name}'
 
-        font = ImageFont.truetype('Arial.ttf', 30)
+        font = ImageFont.truetype('fonts/BurbankBigCondensed-Bold.otf', 30)
 
         text_width, text_height = draw.textsize(text, font=font)
         # skip avatar when center text
