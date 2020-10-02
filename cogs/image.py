@@ -99,7 +99,7 @@ class image(commands.Cog):
 
         # get URL to avatar
         # sometimes `size=` doesn't gives me image in expected size so later I use `resize()`
-        avatar_asset = ctx.author.avatar_url_as(format='jpg', size=AVATAR_SIZE)
+        avatar_asset = ctx.author.avatar_url_as(format='png', size=AVATAR_SIZE)
 
         # read JPG from server to buffer (file-like object)
         buffer_avatar = io.BytesIO(await avatar_asset.read())
