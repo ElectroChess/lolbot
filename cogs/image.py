@@ -35,11 +35,9 @@ class image(commands.Cog):
     @commands.command(name='canvas')
     async def canvas(self, ctx, text=None):
         # read background image only once
-        url = 'images/GRAdient.png'
-        urlFile = File(url, filename='CanvasCard.png')
-        urlFileFinal = 'attachment://CanvasCard.png'
 
-        response = urllib.request.urlopen(urlFileFinal)
+        response = urllib.request.urlopen(
+            'https://cdn.discordapp.com/attachments/760275448553930792/761625339252179004/GRAdient.png')
         # it doesn't need `io.Bytes` because it `response` has method `read()`
         background_image = Image.open(response)
         # add channel ALPHA to draw transparent rectangle
