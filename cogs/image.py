@@ -35,7 +35,7 @@ class image(commands.Cog):
     @commands.command(name='canvas')
     async def canvas(self, ctx, text=None):
         # read background image only once
-        url = 'https://cdn.discordapp.com/attachments/760275448553930792/761625339252179004/GRAdient.png'
+        url = 'images/GRAdient.png'
         response = urllib.request.urlopen(url)
         # it doesn't need `io.Bytes` because it `response` has method `read()`
         background_image = Image.open(response)
